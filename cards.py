@@ -1,3 +1,4 @@
+import random
 class card:
     def __init__(self,suit, val, numericval):
         self.suit=suit
@@ -29,7 +30,26 @@ class hand:
 suitdict={ '0': 'hearts', '1':'diamonds', '2':'spades', '3': 'clubs'}
 carddict={'0':'2','1':'3','2':'4','3':'5','4':'6','5':'7','6':'8','7':'9', '8':'10', '9':'jack', '10':'queen','11':'king','12':'ace'}
 
+class Deck:
+    def __init__(self,deckAmmount=1):        
+        self.deck = []
+        for d in range(deckAmmount):
+            for x in range(4):
+                for y in range(13):
+                    self.deck.append(card(x,y+1,y+1))
 
+    def shuffles(self):
+        length=len(self.deck)
+        print('hello')
+        for i in range(length): 
+            r = random.randint(0,length-1) 
+            self.deck[i], self.deck[r] = self.deck[r], self.deck[i]
+        print("hi")     
+        return self
+
+deckOne = Deck(4)                    
+
+print(deckOne.shuffles().deck[5].displaycardinfo()) 
 
 
        
