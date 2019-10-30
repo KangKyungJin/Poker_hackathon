@@ -16,23 +16,15 @@ class card:
 #         self.suit=suit
 #         self.val= val
 #         self.numericval=None
-if self.val=="ace"
-    def acevalue(self,handval):
-        if handval>10:
-            self.numericval=1
-        if handval<10:
-            self.numericval=11
-    
-if self.val=="jack" or "king" or "queen":
-    self.numericval=10 
-# class hand:
-#     def __init__(self,numofcards=0):
-#         self.totalval=0
-#         self.numofcards=numofcards
-#     def addcard(self):
-#         self.numofcards+=1
-#     def handtotal(self):
-#         self.totalval+=self.numofcards.numericval
+
+class hand:
+    def __init__(self,numofcards=0):
+        self.totalval=0
+        self.numofcards=numofcards
+    def addcard(self):
+        self.numofcards+=1
+    def handtotal(self):
+        self.totalval+=self.numofcards.numericval
 suitdict={ '0': '♥', '1':'♦', '2':'♠', '3': '♣'}
 carddict={'1':'2','2':'3','3':'4','4':'5','5':'6','6':'7','7':'8','8':'9', '9':'10', '10':'jack', '11':'queen','12':'king','13':'ace'}
 
@@ -59,8 +51,19 @@ class Deck:
         card = self.deck.pop()
         return card
 
-deckOne = Deck(4)                   
+deckOne = Deck(4)  
+
 
 for x in range(0,len(deckOne.deck)):
     deckOne.deck[x].suit=suitdict[str(deckOne.deck[x].suit)]
     deckOne.deck[x].val=carddict[str(deckOne.deck[x].val)]
+for l in range(0,len(deckOne.deck)):
+    if deck.deck.val=="ace"
+   
+        if handval>10:
+            deck.deck[x].numericval=1
+        if handval<10:
+            deck.deck[x].numericval=11
+    
+    if self.val=="jack" or "king" or "queen":
+       deck.deck[x].numericval=10 
