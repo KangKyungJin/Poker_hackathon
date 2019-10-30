@@ -11,16 +11,20 @@ class card:
         return self 
 
 #ace class to apply unique property of Ace's bineg 1 or 11
-class ace:
-    def __init__(self,suit, val):
-        self.suit=suit
-        self.val= val
-        self.numericval=None
+# class ace:
+#     def __init__(self,suit, val):
+#         self.suit=suit
+#         self.val= val
+#         self.numericval=None
+if self.val=="ace"
     def acevalue(self,handval):
         if handval>10:
             self.numericval=1
         if handval<10:
             self.numericval=11
+    
+if self.val=="jack" or "king" or "queen":
+    self.numericval=10 
 # class hand:
 #     def __init__(self,numofcards=0):
 #         self.totalval=0
