@@ -18,7 +18,7 @@ class ace:
             self.numericval=1
         if handval<10:
             self.numericval=11
-# class hand:
+
 
     
     
@@ -73,6 +73,9 @@ diamonds10=card("diamonds","10",10)
 diamonds_jack=card("diamonds","jack",10)
 diamonds_queen=card("diamonds","queen",10)
 diamonds_king=card("diamonds","king",10)
-
+clubs_ace=ace("clubs","ace")
+spades_ace=ace("spades","ace")
+diamond_ace=ace("diamonds","ace")
+hearts_ace=ace("hearts","ace")
 
 print(hearts4.displaycardinfo())
