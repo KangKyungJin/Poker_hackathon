@@ -20,14 +20,14 @@ class ace:
             self.numericval=1
         if handval<10:
             self.numericval=11
-class hand:
-    def __init__(self,numofcards):
-        self.totalval=0
-        self.numofcards=numofcards
-    def addcard(self):
-        self.numofcards+=1
-    def handtotal(self):
-        self.totalval+=self.numofcards.numericval
+# class hand:
+#     def __init__(self,numofcards=0):
+#         self.totalval=0
+#         self.numofcards=numofcards
+#     def addcard(self):
+#         self.numofcards+=1
+#     def handtotal(self):
+#         self.totalval+=self.numofcards.numericval
 suitdict={ '0': 'hearts', '1':'diamonds', '2':'spades', '3': 'clubs'}
 carddict={'0':'2','1':'3','2':'4','3':'5','4':'6','5':'7','6':'8','7':'9', '8':'10', '9':'jack', '10':'queen','11':'king','12':'ace'}
 
@@ -52,13 +52,10 @@ class Deck:
         card = self.deck.pop()
         return card
 
-deckOne = Deck(4)                    
+                 
 
-deckOne.shuffles().draw().displaycardinfo()
 
-deckOne.draw().displaycardinfo()
 
-print ("♠")
 
 
        
