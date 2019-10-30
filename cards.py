@@ -4,6 +4,7 @@ class card:
         self.suit=suit
         self.val= val
         self.numericval=numericval
+    
     def displaycardinfo(self):
         print(self.suit,self.val)
     
@@ -42,16 +43,16 @@ class Deck:
 
     def shuffles(self):
         length=len(self.deck)
-        # print('hello')
+        
         for i in range(length): 
             r = random.randint(0,length-1) 
             self.deck[i], self.deck[r] = self.deck[r], self.deck[i]
-    def changecardinfo(self,p,s,c):
-        self.suit=suitdict[s]
-        self.val=carddict[c]
-        # print("hi") 
-        #     
+            
         return self
+    
+    def draw(self):
+        card = self.deck.pop()
+        return card
 
 deckOne = Deck(4)                   
 # for d in range(0,208,1):
@@ -65,7 +66,11 @@ for x in range(0,len(deckOne.deck)):
     deckOne.deck[x].suit=suitdict[str(deckOne.deck[x].suit)]
     # deckOne.deck[x].val=carddict[str(deckOne.deck[x].val)]
 
-#             
+deckOne.shuffles().draw().displaycardinfo()
+
+deckOne.draw().displaycardinfo()
+
+print ("♠")
 
 print(deckOne.deck[154].displaycardinfo())
 
