@@ -8,19 +8,12 @@ class card:
     def displaycardinfo(self):
         return(f"{self.val}{self.suit}")
     def returnVal(self):
+        if self.val == "Ace":
+            self.numericVal = 11
+        elif self.numericVal > 10:
+            self.numericVal = 10
         return(self.numericVal)
 
-#ace class to apply unique property of Ace's bineg 1 or 11
-class ace:
-    def __init__(self,suit, val):
-        self.suit=suit
-        self.val= val
-        self.numericVal=None
-    def acevalue(self,handVal):
-        if handVal>10:
-            self.numericVal=1
-        if handVal<10:
-            self.numericVal=11
 suitdict={ '0': '♥', '1':'♦', '2':'♠', '3': '♣'}
 carddict={'1':'2','2':'3','3':'4','4':'5','5':'6','6':'7','7':'8','8':'9', '9':'10', '10':'Jack', '11':'Queen','12':'King','13':'Ace'}
 
