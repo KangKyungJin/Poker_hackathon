@@ -58,12 +58,12 @@ for x in range(0,len(deckOne.deck)):
     deckOne.deck[x].suit=suitdict[str(deckOne.deck[x].suit)]
     deckOne.deck[x].val=carddict[str(deckOne.deck[x].val)]
 for l in range(0,len(deckOne.deck)):
-    if deck.deck.val=="ace"
+    # if deck.deck.val=="ace"
    
-        if handval>10:
-            deck.deck[x].numericval=1
-        if handval<10:
-            deck.deck[x].numericval=11
+    #     if handval>10:
+    #         deck.deck[x].numericval=1
+    #     if handval<10:
+    #         deck.deck[x].numericval=11
     
-    if self.val=="jack" or "king" or "queen":
-       deck.deck[x].numericval=10 
+    if deckOne.deck[x].val=="jack" or "king" or "queen":
+       deckOne.deck[x].numericval=10 
