@@ -5,6 +5,7 @@ class card:
         self.suit=suit
         self.val= val
         self.numericval=numericval
+    
     def displaycardinfo(self):
         print(self.suit,self.val) 
         return self 
@@ -30,7 +31,7 @@ class hand:
         self.numofcards+=1
     def handtotal(self):
         self.totalval+=self.numofcards.numericval
-suitdict={ '0': 'hearts', '1':'diamonds', '2':'spades', '3': 'clubs'}
+suitdict={ '0': '♥	', '1':'♦', '2':'♠', '3': '	♣'}
 carddict={'0':'2','1':'3','2':'4','3':'5','4':'6','5':'7','6':'8','7':'9', '8':'10', '9':'jack', '10':'queen','11':'king','12':'ace'}
 
 #deck class for building a deck
@@ -41,9 +42,32 @@ class Deck:
             for x in range(4):
                 for y in range(13):
                     self.deck.append(card(x,y+1,y+1))
+
+
     def shuffles(self):
         length=len(self.deck)
+        
         for i in range(length): 
             r = random.randint(0,length-1) 
             self.deck[i], self.deck[r] = self.deck[r], self.deck[i]
+            
         return self
+    
+    def draw(self):
+        card = self.deck.pop()
+        return card
+
+deckOne = Deck(4)                   
+# for d in range(0,208,1):
+#             for x in range(4):
+#                 deckOne.suit=suitdict[x]
+#                 for y in range(13):
+#                     deckOne.val=carddict[y]
+
+for x in range(0,len(deckOne.deck)):
+    deckOne.deck[x].suit=suitdict[str(deckOne.deck[x].suit)]
+    # deckOne.deck[x].val=carddict[str(deckOne.deck[x].val)]
+
+deckOne.shuffles().draw().displaycardinfo()
+
+deckOne.draw().displaycardinfo()
