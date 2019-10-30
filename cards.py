@@ -4,6 +4,7 @@ class card:
         self.suit=suit
         self.val= val
         self.numericval=numericval
+    
     def displaycardinfo(self):
         print(self.suit,self.val) 
 
@@ -19,9 +20,6 @@ class ace:
             self.numericval=1
         if handval<10:
             self.numericval=11
-<<<<<<< HEAD
-# class hand:
-=======
 class hand:
     def __init__(self,numofcards):
         self.totalval=0
@@ -43,21 +41,28 @@ class Deck:
 
     def shuffles(self):
         length=len(self.deck)
-        print('hello')
+        
         for i in range(length): 
             r = random.randint(0,length-1) 
             self.deck[i], self.deck[r] = self.deck[r], self.deck[i]
-        print("hi")     
+            
         return self
+    
+    def draw(self):
+        card = self.deck.pop()
+        return card
 
 deckOne = Deck(4)                    
 
-print(deckOne.shuffles().deck[5].displaycardinfo()) 
+deckOne.shuffles().draw().displaycardinfo()
+
+deckOne.draw().displaycardinfo()
+
+print ("♠")
 
 
        
 
->>>>>>> 5a24b932f26dae2d62e5db8f7083a476b8ab32c4
 
     
     
@@ -112,35 +117,9 @@ print(deckOne.shuffles().deck[5].displaycardinfo())
 # diamonds_jack=card("diamonds","jack",10)
 # diamonds_queen=card("diamonds","queen",10)
 # diamonds_king=card("diamonds","king",10)
-<<<<<<< HEAD
-
-
-#print(hearts4.displaycardinfo())
-class Deck:
-    def __init__(self,deckAmmount=1):        
-        self.deck = []
-        for d in range(deckAmmount):
-            for x in range(4):
-                for y in range(13):
-                    self.deck.append(card(x,y+1,y+1))
-
-    def shuffles(self):
-        length=len(self.deck)
-        print('hello')
-        for i in range(length): 
-            r = random.randint(0,length-1) 
-            self.deck[i], self.deck[r] = self.deck[r], self.deck[i]
-        print("hi")     
-        return self
-
-deckOne = Deck(4)                    
-
-print(deckOne.shuffles().deck[5].displaycardinfo()) 
-=======
 # clubs_ace=ace("clubs","ace")
 # spades_ace=ace("spades","ace")
 # diamond_ace=ace("diamonds","ace")
 # hearts_ace=ace("hearts","ace")
 
 # print(hearts4.displaycardinfo())
->>>>>>> 5a24b932f26dae2d62e5db8f7083a476b8ab32c4
