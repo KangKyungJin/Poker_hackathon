@@ -29,8 +29,8 @@ class hand:
         self.numofcards+=1
     def handtotal(self):
         self.totalval+=self.numofcards.numericval
-suitdict={ '0': '♥	', '1':'♦', '2':'♠', '3': '	♣'}
-carddict={'0':'2','1':'3','2':'4','3':'5','4':'6','5':'7','6':'8','7':'9', '8':'10', '9':'jack', '10':'queen','11':'king','12':'ace'}
+suitdict={ '0': '♥', '1':'♦', '2':'♠', '3': '♣'}
+carddict={'1':'2','2':'3','3':'4','4':'5','5':'6','6':'7','7':'8','8':'9', '9':'10', '10':'jack', '11':'queen','12':'king','13':'ace'}
 
 class Deck:
     def __init__(self,deckAmmount=1):        
@@ -64,7 +64,7 @@ deckOne = Deck(4)
 
 for x in range(0,len(deckOne.deck)):
     deckOne.deck[x].suit=suitdict[str(deckOne.deck[x].suit)]
-    # deckOne.deck[x].val=carddict[str(deckOne.deck[x].val)]
+    deckOne.deck[x].val=carddict[str(deckOne.deck[x].val)]
 
 deckOne.shuffles().draw().displaycardinfo()
 
@@ -72,7 +72,7 @@ deckOne.draw().displaycardinfo()
 
 print ("♠")
 
-print(deckOne.deck[154].displaycardinfo())
+print(deckOne.deck[152].displaycardinfo())
 
        
 
