@@ -70,15 +70,11 @@ def rules(choice):
         print()
         choice = input('Press 2 to head back to main menu: ')
 
-
+#intro prompt to start the game
 play = input("Would you like to play a game?(Y/N)")
 
+#main body to interact with the game
 while play == 'Y' or play == 'y':
     introgame()
     choice = input("Please make your selection: ")
     rules(choice)
-
-#play game page
-
-# def playgame():
-#     if int(choice) == 2:
