@@ -29,7 +29,7 @@ def introgame():
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    """)
+   """)
 
 #First list of options for the user
     print("""1. Rules
