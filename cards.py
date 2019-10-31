@@ -14,13 +14,6 @@ class card:
             self.numericVal = 10
         return(self.numericVal)
 
-#ace class to apply unique property of Ace's bineg 1 or 11
-# class ace:
-#     def __init__(self,suit, val):
-#         self.suit=suit
-#         self.val= val
-#         self.numericval=None
-
 class hand:
     def __init__(self,numofcards=0):
         self.totalval=0
@@ -40,7 +33,6 @@ class Deck:
             for x in range(4):
                 for y in range(13):
                     self.deck.append(card(x,y+1,y+2))
-
     def shuffles(self):
         length=len(self.deck)
         for i in range(length): 
@@ -51,19 +43,3 @@ class Deck:
         card = self.deck.pop()
         return card
 
-deckOne = Deck(4)  
-
-
-for x in range(0,len(deckOne.deck)):
-    deckOne.deck[x].suit=suitdict[str(deckOne.deck[x].suit)]
-    deckOne.deck[x].val=carddict[str(deckOne.deck[x].val)]
-for l in range(0,len(deckOne.deck)):
-    # if deck.deck.val=="ace"
-   
-    #     if handval>10:
-    #         deck.deck[x].numericval=1
-    #     if handval<10:
-    #         deck.deck[x].numericval=11
-    
-    if deckOne.deck[x].val=="jack" or "king" or "queen":
-       deckOne.deck[x].numericval=10 
