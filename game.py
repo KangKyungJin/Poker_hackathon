@@ -101,14 +101,46 @@ def leave(choice):
 
 
 def playGame(choice):
+    user = player()
+    ai = dealer()
     while int(choice) == 2:
-        user = player()
-        ai = dealer()
+
         print("Your starting hand:")
         user.printHand()
+        print(user.handVal())
         print("Dealer's starting hand:")
         ai.printHand()
-        choice = input("If you want to play again, press 2: ")
+        print(ai.handVal())
+        choice = winCon(user.handVal(),ai.handVal())
+        hitHold = input("If you want to hit, type hit. If you want to hold, type hold ")
+        if(str(hitHold) == 'hit'):
+            user.playerHit()
+            if(dealerLogic(ai.handVal())):
+                ai.playerHit()
+        elif(str(hitHold) == 'hold'):
+            if(dealerLogic(ai.handVal())):
+                ai.playerHit()
+
+            
+def winCon(x,y):
+    
+    if (x==21):
+        print('you win')
+        return 1
+    elif(x>21):
+        print('you lose')
+        return 1
+    elif(x>y and y>16) :
+        print('you win')
+        return 1
+    elif(y==21):
+        print('you lose')
+        return 1
+    else:
+        return 2
+def dealerLogic (x): 
+    
+  return x < 17
 
 
 

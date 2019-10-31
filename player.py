@@ -13,6 +13,12 @@ class player:
     def printHand(self):
         for x in range(len(self.hand)):
             print(self.hand[x].displaycardinfo())
+    def handVal(self):
+        val = 0
+        for x in range(len(self.hand)):
+            val = val + self.hand[x].returnVal()
+        return val    
+            
 
 class dealer:
     def __init__(self):
@@ -23,3 +29,10 @@ class dealer:
     def printHand(self):
         for x in range(len(self.hand)):
             print(self.hand[x].displaycardinfo())
+    def handVal(self):
+        val= 0
+        for x in range(len(self.hand)):
+            val = val + self.hand[x].returnVal()
+        return val          
+erik=player()
+erik.handVal()       
