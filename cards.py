@@ -14,14 +14,14 @@ class card:
             self.numericVal = 10
         return(self.numericVal)
 
-class hand:
-    def __init__(self,numofcards=0):
-        self.totalval=0
-        self.numofcards=numofcards
-    def addcard(self):
-        self.numofcards+=1
-    def handtotal(self):
-        self.totalval+=self.numofcards.numericval
+# class hand:
+#     def __init__(self,numofcards=0):
+#         self.totalval=0
+#         self.numofcards=numofcards
+#     def addcard(self):
+#         self.numofcards+=1
+#     def handtotal(self):
+#         self.totalval+=self.numofcards.numericval
 suitdict={ '0': '♥', '1':'♦', '2':'♠', '3': '♣'}
 carddict={'1':'2','2':'3','3':'4','4':'5','5':'6','6':'7','7':'8','8':'9', '9':'10', '10':'Jack', '11':'Queen','12':'King','13':'Ace'}
 
