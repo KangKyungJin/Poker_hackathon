@@ -12,7 +12,7 @@ class player:
         return self
     def printHand(self):
         for x in range(len(self.hand)):
-            print(self.hand[x].displaycardinfo())   
+            print(self.hand[x].displaycardinfo())
 
 class dealer:
     def __init__(self):
@@ -22,11 +22,4 @@ class dealer:
         return self
     def printHand(self):
         for x in range(len(self.hand)):
-            print(self.hand[x].displaycardinfo()) 
-
-
-erik=player()        
-
-# print(erik.playerHit().hand[1].displaycardinfo())
-# print(erik.hand[1].returnVal())
-erik.printHand()
+            print(self.hand[x].displaycardinfo())

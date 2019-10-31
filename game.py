@@ -1,4 +1,5 @@
 import sys
+from player import *
 ###Intro to the game
 def introgame():
 
@@ -70,6 +71,48 @@ def rules(choice):
         print()
         choice = input('Press 2 to head back to main menu: ')
 
+def leave(choice):
+    while int(choice) == 3:
+        print("""
+ /$$$$$$$$ /$$                           /$$                                                  /$$$$$$                         
+|__  $$__/| $$                          | $$                                                 /$$__  $$                        
+   | $$   | $$$$$$$   /$$$$$$  /$$$$$$$ | $$   /$$       /$$   /$$  /$$$$$$  /$$   /$$      | $$  \__//$$$$$$   /$$$$$$       
+   | $$   | $$__  $$ |____  $$| $$__  $$| $$  /$$/      | $$  | $$ /$$__  $$| $$  | $$      | $$$$   /$$__  $$ /$$__  $$      
+   | $$   | $$  \ $$  /$$$$$$$| $$  \ $$| $$$$$$/       | $$  | $$| $$  \ $$| $$  | $$      | $$_/  | $$  \ $$| $$  \__/      
+   | $$   | $$  | $$ /$$__  $$| $$  | $$| $$_  $$       | $$  | $$| $$  | $$| $$  | $$      | $$    | $$  | $$| $$            
+   | $$   | $$  | $$|  $$$$$$$| $$  | $$| $$ \  $$      |  $$$$$$$|  $$$$$$/|  $$$$$$/      | $$    |  $$$$$$/| $$            
+   |__/   |__/  |__/ \_______/|__/  |__/|__/  \__/       \____  $$ \______/  \______/       |__/     \______/ |__/            
+                                                         /$$  | $$                                                            
+                                                        |  $$$$$$/                                                            
+                                                         \______/                                                             
+           /$$                     /$$                     /$$                                                                
+          | $$                    |__/                    | $$                                                                
+  /$$$$$$ | $$  /$$$$$$  /$$   /$$ /$$ /$$$$$$$   /$$$$$$ | $$                                                                
+ /$$__  $$| $$ |____  $$| $$  | $$| $$| $$__  $$ /$$__  $$| $$                                                                
+| $$  \ $$| $$  /$$$$$$$| $$  | $$| $$| $$  \ $$| $$  \ $$|__/                                                                
+| $$  | $$| $$ /$$__  $$| $$  | $$| $$| $$  | $$| $$  | $$                                                                    
+| $$$$$$$/| $$|  $$$$$$$|  $$$$$$$| $$| $$  | $$|  $$$$$$$ /$$                                                                
+| $$____/ |__/ \_______/ \____  $$|__/|__/  |__/ \____  $$|__/                                                                
+| $$                     /$$  | $$               /$$  \ $$                                                                    
+| $$                    |  $$$$$$/              |  $$$$$$/                                                                    
+|__/                     \______/                \______/                                                                     
+""")
+        exit()
+
+
+def playGame(choice):
+    while int(choice) == 2:
+        user = player()
+        ai = dealer()
+        print("Your starting hand:")
+        user.printHand()
+        print("Dealer's starting hand:")
+        ai.printHand()
+        choice = input("If you want to play again, press 2: ")
+
+
+
+
 #intro prompt to start the game
 play = input("Would you like to play a game?(Y/N)")
 
@@ -78,3 +121,5 @@ while play == 'Y' or play == 'y':
     introgame()
     choice = input("Please make your selection: ")
     rules(choice)
+    leave(choice)
+    playGame(choice)
